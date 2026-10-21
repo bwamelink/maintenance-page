@@ -4,8 +4,9 @@ FROM nginx:alpine
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy static maintenance page
+# Copy static maintenance page and brand logo
 COPY index.html /usr/share/nginx/html/index.html
+COPY anders-luisteren-logo.png /usr/share/nginx/html/anders-luisteren-logo.png
 
 EXPOSE 80
 
